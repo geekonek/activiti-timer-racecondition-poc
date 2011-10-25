@@ -1,0 +1,21 @@
+Oct 25, 2011 10:32:29 AM org.activiti.engine.impl.interceptor.CommandContext close
+SEVERE: Error while closing command context
+org.activiti.engine.ActivitiOptimisticLockingException: TimerEntity[174] was updated by another transaction concurrently
+        at org.activiti.engine.impl.db.DbSqlSession.flushUpdates(DbSqlSession.java:435)
+        at org.activiti.engine.impl.db.DbSqlSession.flush(DbSqlSession.java:348)
+        at org.activiti.engine.impl.interceptor.CommandContext.flushSessions(CommandContext.java:147)
+        at org.activiti.engine.impl.interceptor.CommandContext.close(CommandContext.java:103)
+        at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:49)
+        at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33)
+        at org.activiti.engine.impl.jobexecutor.JobAcquisitionThread.run(JobAcquisitionThread.java:63)
+Oct 25, 2011 10:32:29 AM org.activiti.engine.impl.jobexecutor.JobAcquisitionThread run
+SEVERE: exception during job acquisition: TimerEntity[174] was updated by another transaction concurrently
+org.activiti.engine.ActivitiOptimisticLockingException: TimerEntity[174] was updated by another transaction concurrently
+        at org.activiti.engine.impl.db.DbSqlSession.flushUpdates(DbSqlSession.java:435)
+        at org.activiti.engine.impl.db.DbSqlSession.flush(DbSqlSession.java:348)
+        at org.activiti.engine.impl.interceptor.CommandContext.flushSessions(CommandContext.java:147)
+        at org.activiti.engine.impl.interceptor.CommandContext.close(CommandContext.java:103)
+        at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:49)
+        at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:33)
+        at org.activiti.engine.impl.jobexecutor.JobAcquisitionThread.run(JobAcquisitionThread.java:63)
+
